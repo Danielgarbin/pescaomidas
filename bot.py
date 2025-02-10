@@ -97,6 +97,8 @@ async def trivia(ctx):
 async def on_message(message):
     if message.author.bot:
         return
+    # Tu código aquí
+    await bot.process_commands(message)
 
     # Comprobar si hay una trivia activa en este canal
     if message.channel.id in active_trivia:
